@@ -37,7 +37,7 @@ class index(app.page):
 '''
 
 class forward(app.page):
-    path = '/(\*?)((?:[a-zA-Z0-9-]+\.)+[a-zA-Z0-9-]{2,}/.*)'
+    path = '/(\*?)((?:(?:[a-zA-Z0-9-]+\.)+[a-zA-Z0-9-]{2,}|(?:[0-9]+\.){3}[0-9]+)(?::[0-9]+)?/.*)'
     def GET(self, scheme, url):
         if scheme == '':
             scheme = 'http'
