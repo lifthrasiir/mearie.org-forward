@@ -17,6 +17,8 @@ class index(app.page):
 <head> 
     <meta http-equiv="Content-Language" content="ko" /> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title>fw.mearie.org</title> 
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" /> 
     <style type="text/css">/*<![CDATA[*/
         body { font-family: "Helvetica Neue", "Helvetica Neue Light", "HelveticaNeue-Light", "Arial", "Helvetica", "나눔고딕", "NanumGothic", "Nanum Gothic", sans-serif; font-size: 0.9em; font-weight: 200; width: 480px; margin: 3em auto; color: white; background: #397; }
         strong { font-weight: 700; }
@@ -28,7 +30,6 @@ class index(app.page):
         a:visited { text-decoration: none; }
         ul { list-style: square; line-height: 1.5; padding-left: 1.5em; margin-left: 0; }
     /*]]>*/</style>
-    <title>fw.mearie.org</title> 
 </head>
 <body>
     <h1><img src="http://selene.mearie.org/logo.png" width="117" height="117" alt="" />fw.<a href="http://mearie.org/">mearie.org</a></h1>
@@ -50,6 +51,20 @@ class index(app.page):
     <p lang="en">The owner of this domain, Kang Seonghoon, don't have any responsibility on the generated URL. The URL "generated" from this domain is actually transparent, compared to the most URL shortening services, so I don't have any plan to add a feature to track users. In fact, this server doesn't collect any log for this particular domain at all. If you have to trace a malicious activity using this domain, it would be better to <a href="http://google.com/">google</a> it.</p>
 </body>
 </html>
+'''
+
+class favicon(app.page):
+    path = '/favicon\.ico'
+    def GET(self):
+        raise web.redirect('http://selene.mearie.org/favicon.ico')
+
+class robots(app.page):
+    path = '/robots\.txt'
+    def GET(self):
+        web.header('Content-type', 'text/plain')
+        return '''\
+User-Agent: *
+Disallow: /*
 '''
 
 class script(app.page):
