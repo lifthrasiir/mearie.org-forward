@@ -45,7 +45,7 @@ class index(app.page):
     <p>주의: 자바스크립트를 쓰므로 이미지 링크에는 효과가 없습니다. 이보세요! 여긴 지금 중환자실입니다. 전화는 없어요.</p>
     <h2>좀 더 편한 방법</h2>
     <p>HTML5 <a href="http://www.w3.org/TR/html5/interactive-elements.html#link-type-noreferrer"><code>rel="noreferrer"</code></a>을 이미 쓰고 있다면 <code>&lt;/body&gt;</code> 앞에 이런 코드를 넣어도 됩니다.</p>
-    <pre>&lt;script type="<a href="script">http://fw.mearie.org/script</a>"&gt;&lt;/script&gt;</pre>
+    <pre>&lt;script src="<a href="script">http://fw.mearie.org/script</a>"&gt;&lt;/script&gt;</pre>
     <p><a href="http://dahlia.kr/">홍민희</a> 님께서 만드신 코드를 적절히 뜯어 고쳤습니다 ㄱㅅㄱㅅ</p>
     <h2 lang="en">Disclaimers</h2>
     <p lang="en">The owner of this domain, Kang Seonghoon, don't have any responsibility on the generated URL. The URL "generated" from this domain is actually transparent, compared to the most URL shortening services, so I don't have any plan to add a feature to track users. In fact, this server doesn't collect any log for this particular domain at all. If you have to trace a malicious activity using this domain, it would be better to <a href="http://google.com/">google</a> it.</p>
